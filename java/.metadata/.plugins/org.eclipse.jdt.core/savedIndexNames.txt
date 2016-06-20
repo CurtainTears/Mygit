@@ -1,0 +1,6 @@
+INDEX VERSION 1.127+/Users/Ziltchear/Desktop/java/.metadata/.plugins/org.eclipse.jdt.core
+4130707214.index
+707202136.index
+3104846409.index
+1196276972.index
+2279383384.index
