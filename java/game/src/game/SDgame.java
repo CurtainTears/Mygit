@@ -8,15 +8,15 @@ import javax.swing.border.*;
 
 public class SDgame extends JFrame implements ActionListener, KeyListener {
 	private static final long serialVersionUID = 1L;
-	Container con;
-	JPanel control;
-	Toolkit toolkit = this.getToolkit();
-	JMenuItem newGame = new JMenuItem("新建游戏(N)");
+	Container con;//新建容器
+	JPanel control;//中间容器
+	Toolkit toolkit = this.getToolkit();//新建工具
+	JMenuItem newGame = new JMenuItem("新建游戏(N)");//菜单栏
 	JMenuItem saveGame = new JMenuItem("保存游戏(S)");
 	JMenuItem exitGame = new JMenuItem("退出游戏(E)");
 	JMenuItem nextStep = new JMenuItem("前进一步(N)");
 	JMenuItem lastStep = new JMenuItem("后退一步(L)");
-	// /////////////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////////////
 	ArrayList<Step> stepArray = new ArrayList<Step>();
 	int currentStep = stepArray.size() - 1;
 	int forcusX = 0, forcusY = 0;
