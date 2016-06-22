@@ -8,14 +8,14 @@ import javax.swing.border.*;
 
 public class SDgame extends JFrame implements ActionListener, KeyListener {
 	private static final long serialVersionUID = 1L;
-	Container con;//æ–°å»ºå®¹å™¨
-	JPanel control;//ä¸­é—´å®¹å™¨
-	Toolkit toolkit = this.getToolkit();//æ–°å»ºå·¥å…·
-	JMenuItem newGame = new JMenuItem("æ–°å»ºæ¸¸æˆ(N)");//èœå•æ 
-	JMenuItem saveGame = new JMenuItem("ä¿å­˜æ¸¸æˆ(S)");
-	JMenuItem exitGame = new JMenuItem("é€€å‡ºæ¸¸æˆ(E)");
-	JMenuItem nextStep = new JMenuItem("å‰è¿›ä¸€æ­¥(N)");
-	JMenuItem lastStep = new JMenuItem("åé€€ä¸€æ­¥(L)");
+	Container con;//ĞÂ½¨ÈİÆ÷
+	JPanel control;//ÖĞ¼äÈİÆ÷
+	Toolkit toolkit = this.getToolkit();//ĞÂ½¨¹¤¾ß
+	JMenuItem newGame = new JMenuItem("ĞÂ½¨ÓÎÏ·(N)");//²Ëµ¥À¸
+	JMenuItem saveGame = new JMenuItem("±£´æÓÎÏ·(S)");
+	JMenuItem exitGame = new JMenuItem("ÍË³öÓÎÏ·(E)");
+	JMenuItem nextStep = new JMenuItem("Ç°½øÒ»²½(N)");
+	JMenuItem lastStep = new JMenuItem("ºóÍËÒ»²½(L)");
 	///////////////////////////////////////////////////////////////////////////////////
 	ArrayList<Step> stepArray = new ArrayList<Step>();
 	int currentStep = stepArray.size() - 1;
@@ -160,7 +160,7 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 			}
 		}
 		// ////////////////////////////////////////////
-		JMenu menuFile = new JMenu("æ¸¸æˆ(G)");
+		JMenu menuFile = new JMenu("ÓÎÏ·(G)");
 		menuFile.setMnemonic('G');
 		menuFile.add(newGame);
 		newGame.addActionListener(this);
@@ -169,7 +169,7 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 		menuFile.add(exitGame);
 		exitGame.addActionListener(this);
 
-		JMenu menuEdit = new JMenu("ç¼–è¾‘(E)");
+		JMenu menuEdit = new JMenu("±à¼­(E)");
 		menuEdit.setMnemonic('E');
 		menuEdit.add(lastStep);
 		lastStep.addActionListener(this);
@@ -203,7 +203,7 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 		this.lastStep.setEnabled(false);
 		this.nextStep.setEnabled(false);
 		con.add(new JScrollPane(control));
-		this.setTitle("æ•°ç‹¬å°æ¸¸æˆ");
+		this.setTitle("Êı¶ÀĞ¡ÓÎÏ·");
 		this.setLocation(200, 200);
 		this.setSize(620, 620);
 		this.setVisible(true);
@@ -229,18 +229,18 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 				nextStep.setEnabled(false);
 		} else if (ae.getSource() == newGame) {
 			try {
-				String s = JOptionPane.showInputDialog(this, "è¯·è¾“å…¥éš¾åº¦ç³»æ•°(0-81):");
+				String s = JOptionPane.showInputDialog(this, "ÇëÊäÈëÄÑ¶ÈÏµÊı(0-81):");
 				if (s == null)
 					return;
 				int snum = Integer.parseInt(s);
 				if (snum >= 0 && snum <= 81) {
 					easyLevel = snum;
 				} else {
-					JOptionPane.showMessageDialog(this, "éš¾åº¦ç³»æ•°èŒƒå›´ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥");
+					JOptionPane.showMessageDialog(this, "ÄÑ¶ÈÏµÊı·¶Î§²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë");
 					return;
 				}
 			} catch (NumberFormatException nfe) {
-				JOptionPane.showMessageDialog(this, "è¾“å…¥æ ¼å¼ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥");
+				JOptionPane.showMessageDialog(this, "ÊäÈë¸ñÊ½²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë");
 				return;
 			}
 			itemTotal = getNewItems();
@@ -378,28 +378,28 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 
 	public void showWinGame() {
 		if (starttime > 0) {
-			String message = new String("æ­å–œä½ ï¼Œå·²è¿‡å…³");
+			String message = new String("¹§Ï²Äã£¬ÒÑ¹ı¹Ø");
 			overtime = System.currentTimeMillis();
-			message += "\næœ¬å…³éš¾åº¦ç³»æ•°ï¼š";
+			message += "\n±¾¹ØÄÑ¶ÈÏµÊı£º";
 			Integer cureasyLevel = easyLevel;
 			message += cureasyLevel.toString();
-			message += "\nç”¨æ—¶";
+			message += "\nÓÃÊ±";
 			Integer usetime = (int) (overtime - starttime);
 			usetime /= 1000;
 			String time;
 			if (usetime <= 60) {
 				time = usetime.toString();
-				time += " ç§’";
+				time += " Ãë";
 			} else if (usetime <= 3600) {
 				Integer minute = usetime / 60;
 				Integer second = usetime % 60;
-				time = minute.toString() + " åˆ† " + second.toString() + " ç§’";
+				time = minute.toString() + " ·Ö " + second.toString() + " Ãë";
 			} else {
 				Integer hour = usetime / 3600;
 				Integer minute = usetime / 60;
 				Integer second = usetime % 60;
-				time = hour.toString() + " å°æ—¶ " + minute.toString() + " åˆ† "
-						+ second.toString() + " ç§’";
+				time = hour.toString() + " Ğ¡Ê± " + minute.toString() + " ·Ö "
+						+ second.toString() + " Ãë";
 			}
 			message += time;
 			JOptionPane.showMessageDialog(this, message);
