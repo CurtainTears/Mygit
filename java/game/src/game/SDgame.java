@@ -31,8 +31,7 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.add(menuFile);
 		this.setJMenuBar(menuBar);
-		
-		// ////////////////////////////////////////////
+		//////////////////////////////////////////////
 		con = this.getContentPane();
 		control = new JPanel();
 		control.setLayout(new GridLayout(3, 3));
@@ -52,22 +51,16 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 			panelNum[i].setBorder(border);
 			control.add(panelNum[i]);
 		}
-		
-		//this.lastStep.setEnabled(false);
-		//this.nextStep.setEnabled(false);
 		con.add(new JScrollPane(control));
 		this.setTitle("神奇的数独");
 		this.setLocation(200, 200);
-		this.setSize(620, 620);
+		this.setSize(700, 700);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 	
-	//JMenuItem nextStep = new JMenuItem("前进一步(N)");
-	//JMenuItem lastStep = new JMenuItem("后退一步(L)");
 	// /////////////////////////////////////////////////////////////////////////////////
-	ArrayList<Step> stepArray = new ArrayList<Step>();
-	int currentStep = stepArray.size() - 1;
+	
 	int forcusX = 0, forcusY = 0;
 	int[][] itemTotal = new int[9][9];
 	JButton[][] buttonNum = new JButton[9][9];
@@ -145,27 +138,11 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 			
 		}
 		if (num >= 0) {
-			stepArray.add(new Step(forcusX, forcusY, num,
-					itemTotal[forcusX][forcusY]));
 			itemTotal[forcusX][forcusY] = num;
-			currentStep++;
 			showNumOnButtons(itemTotal);
-			//this.lastStep.setEnabled(true);
-			// if(!SDgame.judge(itemTotal))
-			//showColorOnButtons();
-			if( SDgame.judge(itemTotal))
+			if(SDgame.judge(itemTotal))
 				showWinGame();
-		} else {
-			if (forcusX < 0)
-				forcusX = 0;
-			if (forcusX > 8)
-				forcusX = 8;
-			if (forcusY < 0)
-				forcusY = 0;
-			if (forcusY > 8)
-				forcusY = 8;
-		}
-		//showColorOnButtons();
+		} 
 	}
 
 	public void keyTyped(KeyEvent e) {
@@ -175,13 +152,7 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 	}
 
 	// ///////////////////////////////////////////////////////////////////////////////
-	public void excuteStep(Step step, boolean flag) {
-		if (flag) {
-			itemTotal[step.x][step.y] = step.newnum;
-		} else
-			itemTotal[step.x][step.y] = step.orinum;
-		this.showNumOnButtons(itemTotal);
-	}
+	
 	public void actionPerformed(ActionEvent ae) {//触发事件后执行
 	     if (ae.getSource() == newGame) {
 			try {
@@ -203,7 +174,6 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 			starttime = System.currentTimeMillis();
 			
 			showNumOnButtons(itemTotal);
-			//showColorOnButtons();
 		}
 		else if (ae.getSource() == exitGame) {
 			System.exit(0);
@@ -227,7 +197,7 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 			}
 			forcusX = I;
 			forcusY = J;
-			//showColorOnButtons();
+			
 		}
 	}
 	public static void main(String[] args) {
