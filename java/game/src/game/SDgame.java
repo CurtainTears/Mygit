@@ -4,6 +4,7 @@ import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
 import javax.swing.border.*;
+
 public class SDgame extends JFrame implements ActionListener, KeyListener {
 	private static final long serialVersionUID = 1L;
 	Container con;
@@ -21,7 +22,7 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 	static long starttime = -1; // 游戏开始和结束的时间
 	static long overtime = -1;
 	static int easyLevel = 0; // 控制游戏的难易程度
-	public SDgame() {
+	public  SDgame() {
 		this.setTitle("神奇的数独");
 		this.setLocation(200, 200);
 		this.setSize(700, 700);
@@ -154,7 +155,7 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 				JOptionPane.showMessageDialog(this, "输入格式不正确，请重新输入！");
 				return;
 			}
-			itemTotal = level.getNewItems();
+			itemTotal = level.getNewItems(easyLevel);
 			starttime = System.currentTimeMillis();
 			showNumOnButtons(itemTotal);
 		}
@@ -192,15 +193,11 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 			}
 		}
 	}
-	public static void main(String[] args) {
+public static void main(String[] args) {
 		new SDgame();
 	}
-	public void keyTyped(KeyEvent e) {
-	}
-
-	public void keyReleased(KeyEvent e) {
-	}
-
+	public void keyTyped(KeyEvent e) {}
+	public void keyReleased(KeyEvent e) {}
 }
 class Judge{
 	public static boolean judge(int[][] item) {// 整体判断当前是否已经正确填满
@@ -252,9 +249,9 @@ class Judge{
 	}
 }
 class level{
-	public static int[][] getNewItems() {// 得到经随机遮盖处理好的数独矩阵
-		int[][] result = level.getCompleteItems();
-		for (int i = 0; i < SDgame.easyLevel; i++) {
+	public static int[][] getNewItems(int l) {// 得到经随机遮盖处理好的数独矩阵
+		int[][] result = getCompleteItems();
+		for (int i = 0; i < l; i++) {
 			int r = (int) (Math.random() * 81);
 			if (r == 81)
 				r -= 1;
@@ -265,7 +262,7 @@ class level{
 		return result;
 	}
 
-	public static int[][] getCompleteItems() {// 得到填好的数独矩阵
+	  static int[][] getCompleteItems() {// 得到填好的数独矩阵
 		int[][] temp = { { 7, 1, 6, 3, 5, 8, 4, 2, 9 },{ 8, 4, 9, 2, 6, 7, 3, 1, 5 }, { 3, 5, 2, 4, 1, 9, 6, 8, 7 },
 				         { 5, 6, 7, 9, 4, 1, 8, 3, 2 }, { 4, 8, 1, 5, 3, 2, 7, 9, 6 },{ 9, 2, 3, 8, 7, 6, 5, 4, 1 },
 				         { 2, 9, 4, 6, 8, 5, 1, 7, 3 },{ 1, 3, 5, 7, 2, 4, 9, 6, 8 }, { 6, 7, 8, 1, 9, 3, 2, 5, 4 } };
@@ -305,7 +302,7 @@ class Win{
 						+ second.toString() + " 秒";
 			}
 			message += time;
-			JOptionPane.showMessageDialog(null, message, null, usetime);
+			JOptionPane.showMessageDialog(null, message);
 			for (int i = 0; i < 9; i++) {
 				for (int j = 0; j < 9; j++) {
 					SDgame.itemTotal[i][j] = 0;
