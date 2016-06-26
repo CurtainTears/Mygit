@@ -9,9 +9,9 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 	private static final long serialVersionUID = 1L;
 	Container con;
 	JPanel control;
-	JMenu menuFile = new JMenu("ÓÎÏ·");
-	JMenuItem newGame = new JMenuItem("ĞÂ½¨ÓÎÏ·");
-	JMenuItem exitGame = new JMenuItem("ÍË³öÓÎÏ·");
+	JMenu menuFile = new JMenu("æ¸¸æˆ");
+	JMenuItem newGame = new JMenuItem("æ–°å»ºæ¸¸æˆ");
+	JMenuItem exitGame = new JMenuItem("é€€å‡ºæ¸¸æˆ");
 	Border black = BorderFactory.createLineBorder(Color.RED);
 	Border raisedBevel = BorderFactory.createRaisedBevelBorder();
 	Border border = BorderFactory.createCompoundBorder(raisedBevel, black);
@@ -19,11 +19,11 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 	static JButton[][] buttonNum = new JButton[9][9];
 	int forcusX = 0, forcusY = 0;
 	static int[][] itemTotal = new int[9][9];
-	static long starttime = -1; // ÓÎÏ·¿ªÊ¼ºÍ½áÊøµÄÊ±¼ä
+	static long starttime = -1; 
 	static long overtime = -1;
-	static int easyLevel = 0; // ¿ØÖÆÓÎÏ·µÄÄÑÒ×³Ì¶È
+	static int easyLevel = 0; 
 	public  SDgame() {
-		this.setTitle("ÉñÆæµÄÊı¶À");
+		this.setTitle("æ•°ç‹¬å°æ¸¸æˆ");
 		this.setLocation(200, 200);
 		this.setSize(700, 700);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -67,7 +67,7 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 		this.setVisible(true);
 	}
 	public void keyPressed(KeyEvent e) {
-		if (starttime < 0) {// ÓÎÏ·»¹Î´¿ªÊ¼,·µ»Ø
+		if (starttime < 0) {// æŒ‰é”®ç›‘å¬äº‹ä»¶
 			return;
 		}
 		int keycode = e.getKeyCode();
@@ -138,21 +138,21 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 				Win.showWinGame();
 		} 
 	}
-	public void actionPerformed(ActionEvent ae) {//´¥·¢ÊÂ¼şºóÖ´ĞĞ
+	public void actionPerformed(ActionEvent ae) {//é¼ æ ‡äº‹ä»¶ç›‘å¬
 	     if (ae.getSource() == newGame) {
 			try {
-				String s = JOptionPane.showInputDialog(this, "ÇëÊäÈëÄÑ¶ÈÏµÊı(0-81):");
+				String s = JOptionPane.showInputDialog(this, "è¯·è¾“å…¥éš¾åº¦ç³»æ•°(0-81):");
 				if (s == null)
 					return;
 				int snum = Integer.parseInt(s);
 				if (snum >= 0 && snum <= 81) {
 					easyLevel = snum;
 				}else {
-					JOptionPane.showMessageDialog(this, "ÄÑ¶ÈÏµÊı·¶Î§²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë£¡");
+					JOptionPane.showMessageDialog(this, "éš¾åº¦ç³»æ•°èŒƒå›´ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ï¼");
 					return;
 				}
 			} catch (NumberFormatException nfe) {
-				JOptionPane.showMessageDialog(this, "ÊäÈë¸ñÊ½²»ÕıÈ·£¬ÇëÖØĞÂÊäÈë£¡");
+				JOptionPane.showMessageDialog(this, "è¾“å…¥æ ¼å¼ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°è¾“å…¥ï¼");
 				return;
 			}
 			itemTotal = level.getNewItems(easyLevel);
@@ -163,11 +163,11 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 			System.exit(0);
 		}
 		else {
-			if (starttime < 0) {// ÓÎÏ·»¹Î´¿ªÊ¼,·µ»Ø
+			if (starttime < 0) {// ï¿½ï¿½Ï·ï¿½ï¿½Î´ï¿½ï¿½Ê¼,ï¿½ï¿½ï¿½ï¿½
 				return;}
 			JButton button = (JButton) ae.getSource();
 			int I = 0, J = 0;
-			for (I = 0; I < 9; I++) {// ÕÒµ½·¢ÉúÊÂ¼şµÄ°´Å¥µÄ×ø±ê
+			for (I = 0; I < 9; I++) {// ï¿½Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ä°ï¿½Å¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				boolean ifFind = false;
 				for (J = 0; J < 9; J++) {
 					if (button == buttonNum[I][J]) {
@@ -183,7 +183,7 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 			
 		}
 	}
-	public static void showNumOnButtons(int[][] item) {// °ÑitemÀï±£´æµÄÖµÏÔÊ¾µ½°´Å¥ÉÏ
+	public static void showNumOnButtons(int[][] item) {// ï¿½ï¿½itemï¿½ï±£ï¿½ï¿½ï¿½Öµï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Å¥ï¿½ï¿½
 		for (int i = 0; i < 9; i++) {
 			for (int j = 0; j < 9; j++) {
 				if (item[i][j] == 0)
@@ -200,7 +200,7 @@ public static void main(String[] args) {
 	public void keyReleased(KeyEvent e) {}
 }
 class Judge{
-	public static boolean judge(int[][] item) {// ÕûÌåÅĞ¶Ïµ±Ç°ÊÇ·ñÒÑ¾­ÕıÈ·ÌîÂú
+	public static boolean judge(int[][] item) {// ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¶Ïµï¿½Ç°ï¿½Ç·ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½
 		for (int i = 0; i < 9; i++) {
 			if (!Judge.judgeLine(item[i]))
 				return false;
@@ -221,12 +221,12 @@ class Judge{
 		return true;
 	}
 
-	public static boolean judgeLine(int[] item) {// ÅĞ¶ÏÒ»ĞĞÊÇ·ñ·ûºÏÊı¶À¹æÔò
+	public static boolean judgeLine(int[] item) {// ï¿½Ğ¶ï¿½Ò»ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		int[] temp = new int[9];
 		for (int i = 0; i < 9; i++) {
 			temp[i] = item[i];
 		}
-		Arrays.sort(temp);// ´ÓĞ¡µ½´óÅÅĞò
+		Arrays.sort(temp);// ï¿½ï¿½Ğ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		for (int i = 0; i < 9; i++) {
 			if (temp[i] != i + 1)
 				return false;
@@ -234,7 +234,7 @@ class Judge{
 		return true;
 	}
 
-	public static int[][] transformOfItems(int[][] oriItem) {// ×ª»»¾ØÕóĞÎÊ½
+	public static int[][] transformOfItems(int[][] oriItem) {// ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 		int[][] result = new int[9][9];
 		for (int i = 0; i < 9; i++) {
 			int index = 0;
@@ -249,7 +249,7 @@ class Judge{
 	}
 }
 class level{
-	public static int[][] getNewItems(int l) {// µÃµ½¾­Ëæ»úÕÚ¸Ç´¦ÀíºÃµÄÊı¶À¾ØÕó
+	public static int[][] getNewItems(int l) {// ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸Ç´ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		int[][] result = getCompleteItems();
 		for (int i = 0; i < l; i++) {
 			int r = (int) (Math.random() * 81);
@@ -262,7 +262,7 @@ class level{
 		return result;
 	}
 
-	  static int[][] getCompleteItems() {// µÃµ½ÌîºÃµÄÊı¶À¾ØÕó
+	  static int[][] getCompleteItems() {// ï¿½Ãµï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		int[][] temp = { { 7, 1, 6, 3, 5, 8, 4, 2, 9 },{ 8, 4, 9, 2, 6, 7, 3, 1, 5 }, { 3, 5, 2, 4, 1, 9, 6, 8, 7 },
 				         { 5, 6, 7, 9, 4, 1, 8, 3, 2 }, { 4, 8, 1, 5, 3, 2, 7, 9, 6 },{ 9, 2, 3, 8, 7, 6, 5, 4, 1 },
 				         { 2, 9, 4, 6, 8, 5, 1, 7, 3 },{ 1, 3, 5, 7, 2, 4, 9, 6, 8 }, { 6, 7, 8, 1, 9, 3, 2, 5, 4 } };
@@ -276,30 +276,30 @@ class level{
 	}
 }
 class Win{
-	public static void showWinGame() {// ÓÎÏ·¹ı¹ØºóµÄ´¦Àíº¯Êı
+	public static void showWinGame() {// ï¿½ï¿½Ï·ï¿½ï¿½ï¿½Øºï¿½Ä´ï¿½ï¿½ï¿½ï¿½ï¿½
 		if (SDgame.starttime > 0) {
-			String message = new String("¹§Ï²Äã£¬ÒÑ¹ı¹Ø£¡");
+			String message = new String("æ­å–œä½ ï¼Œå·²è¿‡å…³ï¼");
 			SDgame.overtime = System.currentTimeMillis();
-			message += "\n±¾¹ØÄÑ¶ÈÏµÊı£º";
+			message += "\næœ¬å…³éš¾åº¦ç³»æ•°ï¼š";
 			Integer cureasyLevel = SDgame.easyLevel;
 			message += cureasyLevel.toString();
-			message += "\n¹ı¹Ø¹²ÓÃÊ±¼ä£º";
+			message += "\nè¿‡å…³å…±ç”¨æ—¶é—´ï¼š";
 			Integer usetime = (int) (SDgame.overtime - SDgame.starttime);
 			usetime /= 1000;
 			String time;
 			if (usetime <= 60) {
 				time = usetime.toString();
-				time += " Ãë";
+				time += " ç§’";
 			} else if (usetime <= 3600) {
 				Integer minute = usetime / 60;
 				Integer second = usetime % 60;
-				time = minute.toString() + " ·Ö " + second.toString() + " Ãë";
+				time = minute.toString() + " åˆ† " + second.toString() + " ç§’";
 			} else {
 				Integer hour = usetime / 3600;
 				Integer minute = usetime / 60;
 				Integer second = usetime % 60;
-				time = hour.toString() + " Ğ¡Ê± " + minute.toString() + " ·Ö "
-						+ second.toString() + " Ãë";
+				time = hour.toString() + " å°æ—¶ " + minute.toString() + " åˆ† "
+						+ second.toString() + " ç§’";
 			}
 			message += time;
 			JOptionPane.showMessageDialog(null, message);
