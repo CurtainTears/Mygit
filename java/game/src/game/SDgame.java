@@ -163,11 +163,11 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 			System.exit(0);
 		}
 		else {
-			if (starttime < 0) {// ��Ϸ��δ��ʼ,����
+			if (starttime < 0) {//如果开始时间小于0，返回  游戏未开始
 				return;}
 			JButton button = (JButton) ae.getSource();
 			int I = 0, J = 0;
-			for (I = 0; I < 9; I++) {// �ҵ������¼��İ�ť������
+			for (I = 0; I < 9; I++) {// 寻找按钮坐标
 				boolean ifFind = false;
 				for (J = 0; J < 9; J++) {
 					if (button == buttonNum[I][J]) {
@@ -183,7 +183,7 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 			
 		}
 	}
-	public static void showNumOnButtons(int[][] item) {// ��item�ﱣ���ֵ��ʾ����ť��
+	public static void showNumOnButtons(int[][] item) {//把数字显示到按钮上的函数 并且如果数字为0 显示为空
 		for (int i = 0; i < 9; i++) {
 			for (int j = 0; j < 9; j++) {
 				if (item[i][j] == 0)
@@ -199,8 +199,8 @@ public static void main(String[] args) {
 	public void keyTyped(KeyEvent e) {}
 	public void keyReleased(KeyEvent e) {}
 }
-class Judge{
-	public static boolean judge(int[][] item) {// �����жϵ�ǰ�Ƿ��Ѿ���ȷ����
+class Judge{//判断类
+	public static boolean judge(int[][] item) {// 判断是否所有的数字都已经正确填满
 		for (int i = 0; i < 9; i++) {
 			if (!Judge.judgeLine(item[i]))
 				return false;
@@ -221,12 +221,12 @@ class Judge{
 		return true;
 	}
 
-	public static boolean judgeLine(int[] item) {// �ж�һ���Ƿ������������
+	public static boolean judgeLine(int[] item) {// 判断是否每行都正确填满
 		int[] temp = new int[9];
 		for (int i = 0; i < 9; i++) {
 			temp[i] = item[i];
 		}
-		Arrays.sort(temp);// ��С��������
+		Arrays.sort(temp);
 		for (int i = 0; i < 9; i++) {
 			if (temp[i] != i + 1)
 				return false;
@@ -234,7 +234,7 @@ class Judge{
 		return true;
 	}
 
-	public static int[][] transformOfItems(int[][] oriItem) {// ת��������ʽ
+	public static int[][] transformOfItems(int[][] oriItem) {// 转换矩阵形式
 		int[][] result = new int[9][9];
 		for (int i = 0; i < 9; i++) {
 			int index = 0;
@@ -249,7 +249,7 @@ class Judge{
 	}
 }
 class level{
-	public static int[][] getNewItems(int l) {// �õ�������ڸǴ���õ���������
+	public static int[][] getNewItems(int l) {// 得到根据难易程度随机遮盖的数组
 		int[][] result = getCompleteItems();
 		for (int i = 0; i < l; i++) {
 			int r = (int) (Math.random() * 81);
@@ -262,7 +262,7 @@ class level{
 		return result;
 	}
 
-	  static int[][] getCompleteItems() {// �õ���õ���������
+	  static int[][] getCompleteItems() {//得到初始数组
 		int[][] temp = { { 7, 1, 6, 3, 5, 8, 4, 2, 9 },{ 8, 4, 9, 2, 6, 7, 3, 1, 5 }, { 3, 5, 2, 4, 1, 9, 6, 8, 7 },
 				         { 5, 6, 7, 9, 4, 1, 8, 3, 2 }, { 4, 8, 1, 5, 3, 2, 7, 9, 6 },{ 9, 2, 3, 8, 7, 6, 5, 4, 1 },
 				         { 2, 9, 4, 6, 8, 5, 1, 7, 3 },{ 1, 3, 5, 7, 2, 4, 9, 6, 8 }, { 6, 7, 8, 1, 9, 3, 2, 5, 4 } };
@@ -276,7 +276,7 @@ class level{
 	}
 }
 class Win{
-	public static void showWinGame() {// ��Ϸ���غ�Ĵ�����
+	public static void showWinGame() {//过关显示
 		if (SDgame.starttime > 0) {
 			String message = new String("恭喜你，已过关！");
 			SDgame.overtime = System.currentTimeMillis();
