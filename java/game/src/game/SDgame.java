@@ -4,7 +4,6 @@ import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
 import javax.swing.border.*;
-
 public class SDgame extends JFrame implements ActionListener, KeyListener {
 	private static final long serialVersionUID = 1L;
 	Container con;
@@ -24,8 +23,8 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 	static int easyLevel = 0; 
 	public  SDgame() {
 		this.setTitle("数独小游戏");
-		this.setLocation(200, 200);
-		this.setSize(700, 700);
+		this.setLocation(200, 0);
+		this.setSize(900, 900);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		menuFile.add(newGame);
 		newGame.addActionListener(this);
@@ -164,11 +163,12 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 		}
 		else {
 			if (starttime < 0) {//如果开始时间小于0，返回  游戏未开始
-				return;}
+				return;
+				}
 			JButton button = (JButton) ae.getSource();
 			int I = 0, J = 0;
+			boolean ifFind = false;
 			for (I = 0; I < 9; I++) {// 寻找按钮坐标
-				boolean ifFind = false;
 				for (J = 0; J < 9; J++) {
 					if (button == buttonNum[I][J]) {
 						ifFind = true;
@@ -193,12 +193,13 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 			}
 		}
 	}
-public static void main(String[] args) {
+    public static void main(String[] args) {
 		new SDgame();
 	}
 	public void keyTyped(KeyEvent e) {}
 	public void keyReleased(KeyEvent e) {}
 }
+
 class Judge{//判断类
 	public static boolean judge(int[][] item) {// 判断是否所有的数字都已经正确填满
 		for (int i = 0; i < 9; i++) {
@@ -248,6 +249,7 @@ class Judge{//判断类
 		return result;
 	}
 }
+
 class level{
 	public static int[][] getNewItems(int l) {// 得到根据难易程度随机遮盖的数组
 		int[][] result = getCompleteItems();
@@ -303,7 +305,7 @@ class Win{
 			}
 			message += time;
 			JOptionPane.showMessageDialog(null, message);
-			for (int i = 0; i < 9; i++) {
+			for (int i = 0; i < 9; i++) {//把所有的数字替换为0 
 				for (int j = 0; j < 9; j++) {
 					SDgame.itemTotal[i][j] = 0;
 				}
