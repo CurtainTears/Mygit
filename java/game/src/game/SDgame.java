@@ -138,7 +138,7 @@ public class SDgame extends JFrame implements ActionListener, KeyListener {
 		} 
 	}
 	public void actionPerformed(ActionEvent ae) {//鼠标事件监听
-	     if (ae.getSource() == newGame) {
+ 	     if (ae.getSource() == newGame) {
 			try {
 				String s = JOptionPane.showInputDialog(this, "请输入难度系数(0-81):");
 				if (s == null)
