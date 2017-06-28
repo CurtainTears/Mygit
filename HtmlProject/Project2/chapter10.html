@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<form action="">
+    <input type="text" list="fruitlist">
+    <datalist id="fruitlist">
+        <option value="apple">apple</option>
+        <option value="orange">orange</option>
+        <option value="watermelon">watermelon</option>
+    </datalist>
+
+
+    <!--生成下拉列表-->
+    <select name="fruit" id="" multiple size="10" autofocus>
+        <option value="1">apple</option>
+        <option value="2">orange</option>
+        <option value="3">strawbrary</option>
+    </select>
+    <button type="submit">提交</button>
+    <textarea name="content" id="" cols="30" rows="10">
+        请留下您的建议
+    </textarea>
+    <input type="text" placeholder="请输入您的名字">
+
+
+
+</form>
+<form oninput="res.value=parseInt(number1.value)*parseInt(number2.value)">
+    <input type="number" id="number1">
+    <input type="number" id="number2">
+    <output for="number1 number2" name="res"></output>
+</form>
+</body>
+</html>
