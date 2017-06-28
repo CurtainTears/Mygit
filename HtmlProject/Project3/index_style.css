@@ -47,7 +47,220 @@
     transform: translate(-50%, -50%);
 }
 #search-jpg{
+    z-index: 1;
     width: 100%;
     position: absolute;
     top: 80px;
+}
+body form{
+    width: 500px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 300px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: rgba(51,51,51,0.03);
+}
+body form input{
+    width: 350px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 15px;
+    border-color: white;
+    border-style: solid;
+}
+body form button{
+    width: 140px;
+    height: 50px;
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+    background-color: white;
+    font-size: 20px;
+}
+/*article{*/
+    /*position: absolute;*/
+    /*top: 550px;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+/*}*/
+#p1{
+    position: absolute;
+    top: 520px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-style: normal;
+    font-family: "Songti SC";
+    color: grey;
+}#p2{
+     position: absolute;
+     top: 580px;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     font-size: 15px;
+     font-style: normal;
+     font-family: "Songti SC";
+     color: black;
+}
+.hot{
+    width: 28%;
+    height: 300px;
+    position: absolute;
+
+    background-color: white;
+    border: 2px solid #dddddd;
+    /*border-color: grey;*/
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px rgba(50,50,50,0.6);
+}
+.hot div{
+    z-index: 1;
+    width: 130px;
+    height: 40px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: green;
+}
+.hot img{
+    z-index: 0;
+    width: 97%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.hot-name{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.hot-intro{
+    position: absolute;
+    top: 220px;
+    left: 8px;
+    /*color: grey;*/
+}
+.hot-dollar{
+    color: orangered;
+    position: absolute;
+    left: 8px;
+    top: 270px;
+}
+.hot-number{
+    color: orangered;
+    position: absolute;
+    left: 25px;
+    top: 263px;
+    font-size: 24px;
+}
+.hot-qi{
+    color: orangered;
+    position: absolute;
+    left: 90px;
+    top: 269px;
+}
+.hot-sa{
+    color: grey;
+    position: absolute;
+    right: 10px;
+    top: 270px;
+    font-family: STFangsong;
+}
+#hot1{
+
+    left: 3%;
+    top: 600px;
+}
+#hot2{
+    left: 36%;
+    top: 600px;
+}
+#hot3{
+    left: 69%;
+    top: 600px;
+}#hot4{
+
+    left: 3%;
+    top: 950px;
+}
+#hot5{
+    left: 36%;
+    top: 950px;
+}
+#hot6{
+    left: 69%;
+    top: 950px;
+}#hot7{
+
+    left: 3%;
+    top: 1300px;
+}
+#hot8{
+    left: 36%;
+    top: 1300px;
+}
+#hot9{
+    left: 69%;
+    top: 1300px;
+}
+#foot{
+    width: 100%;
+    height: 300px;
+    background-color: #222222;
+    position: absolute;
+    top: 1650px;
+
+}
+#foot div{
+    width: 28%;
+    height: 300px;
+    background-color: #222222;
+    position: absolute;
+    top: 30px;
+}
+#ff1{
+    left: 3%;
+}
+#ff2{
+    left: 36%;
+}
+#ff3{
+    left: 69%;
+}
+.ft{
+    color: #eeeeee;
+    font-size: 36px;
+    font-family: "Songti TC";
+}
+.fc{
+    color: #cccccc;
+    font-size: 20px;
+    font-family: "Songti TC";
+}
+.fa{
+    color: #cccccc;
+    font-size: 20px;
+    font-family: "Songti TC";
+    text-decoration: none;
+}
+#state{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    top: 1950px;
+
+}
+#state p{
+    color: #cccccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Songti SC";
+
 }
