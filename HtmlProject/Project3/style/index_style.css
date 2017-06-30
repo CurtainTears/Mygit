@@ -1,0 +1,162 @@
+
+#search-jpg{
+    z-index: 1;
+    width: 100%;
+    /*position: relative;*/
+    /*top: 80px;*/
+}
+body form{
+    width: 500px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 300px;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background-color: rgba(40,40,40,0.7);
+    border-radius: 10px;
+}
+body form input{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: 345px;
+    height: 40px;
+    font-size: 25px;
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+    outline: none;
+}
+body form button{
+    position: relative;
+    top: 3px;
+    left: 5px;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+    background-color: white;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+}
+#p1{
+    text-align: center;
+    font-size: 50px;
+    font-style: normal;
+    font-family: "Songti SC";
+    color: grey;
+ }
+#p2{
+    text-align: center;
+    font-size: 15px;
+    font-style: normal;
+    font-family: "Songti SC";
+    color: black;
+}
+.hot{
+    display: inline-block;
+    margin: 20px 29px;
+    text-align: center;
+    width: 28%;
+    height: 300px;
+    position: relative;
+    background-color: white;
+    border: 2px solid #dddddd;
+    /*border-color: grey;*/
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px rgba(50,50,50,0.6);
+}
+.hot div{
+    z-index: 1;
+    width: 130px;
+    height: 40px;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    background-color: green;
+
+}
+.hot img{
+    z-index: 0;
+    width: 97%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.hot-name{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+.hot-intro{
+    position: absolute;
+    top: 220px;
+    left: 8px;
+    /*color: grey;*/
+}
+.hot-dollar{
+    color: orangered;
+    position: absolute;
+    left: 8px;
+    top: 270px;
+}
+.hot-number{
+    color: orangered;
+    position: absolute;
+    left: 25px;
+    top: 263px;
+    font-size: 24px;
+}
+.hot-qi{
+    color: orangered;
+    position: absolute;
+    left: 90px;
+    top: 269px;
+}
+.hot-sa{
+    color: grey;
+    position: absolute;
+    right: 10px;
+    top: 270px;
+    font-family: STFangsong;
+}
+/*#hot1{*/
+
+/*}*/
+/*#hot2{*/
+    /*left: 36%;*/
+    /*top: 10px;*/
+/*}*/
+/*#hot3{*/
+    /*left: 69%;*/
+    /*top: 600px;*/
+/*}#hot4{*/
+
+    /*left: 3%;*/
+    /*top: 950px;*/
+/*}*/
+/*#hot5{*/
+    /*left: 36%;*/
+    /*top: 950px;*/
+/*}*/
+/*#hot6{*/
+    /*left: 69%;*/
+    /*top: 950px;*/
+/*}#hot7{*/
+
+    /*left: 3%;*/
+    /*top: 1300px;*/
+/*}*/
+/*#hot8{*/
+    /*left: 36%;*/
+    /*top: 1300px;*/
+/*}*/
+/*#hot9{*/
+    /*left: 69%;*/
+    /*top: 1300px;*/
+/*}*/

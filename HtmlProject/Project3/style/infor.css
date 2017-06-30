@@ -1,0 +1,70 @@
+#headline{
+    width: 100%;
+    min-width: 1263px;
+    background:linear-gradient(to bottom right,rgba(0,0,0,0.7),rgba(0,0,0,0)) , url("../img/headline.jpg"),no-repeat;
+    height: 300px;
+
+}
+#headline .center1{
+    width: 1263px;
+    height: 300px;
+    margin: 0 auto;
+}
+#headline hgroup{
+    padding: 100px 0 0 50px;
+}
+#headline h2{
+    color: #eeeeee;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+#headline h3{
+    color: #eeeeee;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+#container{
+    width: 1263px;
+    /*background: #eeeeee;*/
+    margin: 30px auto;
+}
+#container .sidebar{
+    width: 360px;
+    /*background: #eeeeee;*/
+    float: right;
+}
+#container .sidebox{
+    border: 1px solid #eeeeee;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+#container .sidebar h2{
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: left;
+    text-indent: 8px;
+    height: 40px;
+    line-height: 40px;
+    background: #fafafa;
+    color: #666;
+}
+#container .tag{
+    padding: 10px 0;
+}
+#container .tag ul{
+    display: inline-block;
+}
+#container .tag li{
+    display: inline-block;
+    line-height: 35px;
+    height: 35px;
+    width: 100px;
+    background-color: #eeeeee;
+    text-align: left;
+    margin: 2px 0;
+    text-indent: 8px;
+}
+#container .tag a{
+    display: block;
+    color: #999;
+}

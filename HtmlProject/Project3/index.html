@@ -3,38 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>多多旅行社</title>
-    <link rel="stylesheet" href="index_style.css">
+    <link rel="stylesheet" href="style/index_style.css">
+    <link rel="stylesheet" href="style/basic.css">
 </head>
-<head>
+<body>
 <header>
 <div id="head">
+    <h1 class="h">多多旅行社</h1>
     <img src="img/logo.png" alt="" id="logo">
+    <h2 class="h">网站导航</h2>
     <div id="nav1">
-        <p class="center"><a href="#" title="首页" target="_blank" class="nav-a">首页</a></p>
+        <p class="center"><a href="index.html" title="首页" target="_self" class="nav-a">首页</a></p>
     </div>
     <div id="nav2">
-        <p class="center"><a href="#" title="旅游资讯" target="_blank" class="nav-a">旅游资讯</a></p>
+        <p class="center"><a href="inform.html" title="旅游资讯" target="_self" class="nav-a">旅游资讯</a></p>
     </div>
     <div id="nav3">
-        <p class="center"><a href="#" title="机票订购" target="_blank" class="nav-a">机票订购</a></p>
+        <p class="center"><a href="#" title="机票订购" target="_self" class="nav-a">机票订购</a></p>
     </div>
     <div id="nav4">
-        <p class="center"><a href="#" title="风景欣赏" target="_blank" class="nav-a">风景欣赏</a></p>
+        <p class="center"><a href="#" title="风景欣赏" target="_self" class="nav-a">风景欣赏</a></p>
     </div>
     <div id="nav5">
-        <p class="center"><a href="#" title="公司简介" target="_blank" class="nav-a">公司简介</a></p>
+        <p class="center"><a href="#" title="公司简介" target="_self" class="nav-a">公司简介</a></p>
     </div>
 </div>
 </header>
 <body>
 <img src="img/search.jpg" alt="" id="search-jpg">
 <form method="get">
-    <input type="text" name="searchinput" placeholder="请输入旅游景点或城市">
+    <input type="search" name="searchinput" placeholder="请输入旅游景点或城市">
     <button type="submit">搜索</button>
 </form>
-</body>
-<article>
-    <p id="p1">热门旅游</p>
+<div>
+    <h2 id="p1">热门旅游</h2>
     <p id="p2">国内旅游、国外旅游、自助旅游、自驾旅游、游轮签证、主题旅游等各种最新热门旅游推荐</p>
     <div class="hot" id="hot1">
         <div>
@@ -135,7 +137,8 @@
         <p class="hot-qi">起</p>
         <p class="hot-sa">满意度 100%</p>
     </div>
-</article>
+</div>
+</body>
 <footer>
     <div id="foot">
         <div id="ff1">
@@ -168,5 +171,5 @@
         <p>Copyright©DuoDuo 多多旅行社|苏ICP 备120110119 号|旅行社经营许可证:L-YC-BK12345</p>
     </div>
 </footer>
-</head>
+</body>
 </html>

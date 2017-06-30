@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.h{
+    display: none;
+}
+a{
+    text-decoration: none;
+}
+#head{
+    width: 100%;
+    height: 80px;
+    background: #333333;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+}
+#logo{
+    position: absolute;
+    left: 50px;
+    top: 10px;
+}
+#head div{
+    position: absolute;
+    width: 130px;
+    height: 80px;
+    background: #333333;
+}
+#head div:hover{
+    background-color: black;
+}
+#nav1{
+    left: 550px;
+}
+#nav2{
+    left: 680px;
+}
+#nav3{
+    left: 810px;
+}
+#nav4{
+    left: 940px;
+}
+#nav5{
+    left: 1070px;
+}
+.nav-a{
+    line-height: 80px;
+    text-align: center;
+    width: 130px;
+    height: 80px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#foot{
+    width: 100%;
+    height: 300px;
+    background-color: #222222;
+    /*position: absolute;*/
+    /*top: 1650px;*/
+    clear: both;
+    position: relative;
+}
+#foot div{
+    width: 28%;
+    height: 300px;
+    background-color: #222222;
+    position: absolute;
+    top: 30px;
+    clear: both;
+}
+#ff1{
+    left: 3%;
+}
+#ff2{
+    left: 36%;
+}
+#ff3{
+    left: 69%;
+}
+.ft{
+    color: #eeeeee;
+    font-size: 36px;
+    font-family: "Songti TC";
+}
+.fc{
+    color: #cccccc;
+    font-size: 20px;
+    font-family: "Songti TC";
+}
+.fa{
+    color: #cccccc;
+    font-size: 20px;
+    font-family: "Songti TC";
+    text-decoration: none;
+}
+#state{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    /*position: absolute;*/
+    /*top: 1950px;*/
+    clear: both;
+}
+#state p{
+    color: #cccccc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Songti SC";
+
+}
