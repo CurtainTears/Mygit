@@ -1,12 +1,15 @@
 #container .prof{
-    width: 910px;
+    width: 900px;
     background-color: white;
+    float: left;
 }
 #container .prof h2{
     color: #666;
     font-size: 30px;
+    text-indent: 10px;
 }
 #container .prof p{
     color: #999;
     font-size: 20px;
+    /*text-indent: 10px;*/
 }
