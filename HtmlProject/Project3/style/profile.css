@@ -1,0 +1,12 @@
+#container .prof{
+    width: 910px;
+    background-color: white;
+}
+#container .prof h2{
+    color: #666;
+    font-size: 30px;
+}
+#container .prof p{
+    color: #999;
+    font-size: 20px;
+}

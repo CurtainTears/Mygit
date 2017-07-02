@@ -1,0 +1,40 @@
+#container .lsc{
+    float: left;
+    width: 900px;
+}
+#container .lscimg{
+
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+#container .lsc h2{
+    color: #999999;
+    text-align: left;
+    text-indent: 16px;
+    font-size: 30px;
+}
+#container .lscimg figure{
+
+    margin: 10px 0;
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+}
+#container .more{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 150px;
+    height: 40px;
+    background-color: #fafafa;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    line-height: 40px;
+
+
+}
+#container .more a{
+    color: #999;
+    display: block;
+    /*text-decoration: none;*/
+    /*text-indent: 45px;*/
+}
