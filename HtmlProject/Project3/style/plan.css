@@ -123,3 +123,6 @@
     display: block;
 
 }
+#container .planbook .linecolor{
+    background-color: #fafafa;
+}
