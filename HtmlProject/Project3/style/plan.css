@@ -1,0 +1,125 @@
+#container .planbook{
+    width: 900px;
+}
+#container .planbook li{
+    list-style: none;
+}
+#container .planbook h2{
+    text-indent: 10px;
+    font-size: 25px;
+    color: #666666;
+}
+#container .booktitle{
+    width: 900px;
+    height: 30px;
+    /*text-indent: 5px;*/
+}
+#container .booktitle li{
+    list-style: none;
+    /*text-indent: 5px;*/
+    margin: 0 0 0 10px;
+    float: left;
+    font-size: 20px;
+    color: #666666;
+}
+#container .booktitle li p{
+    width: 55px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    /*background-color: #458b00;*/
+}
+#container .booktitle .active p,#container .booktitle li p:hover{
+    background-color: #3c8b27;
+}
+#container .booktitle .active a,#container .booktitle li a:hover{
+    color: white;
+}
+
+#container .booktitle li a{
+    color: #666666;
+}
+#container .book .tikserch{
+    width: 700px;
+    height: 100px;
+}
+#container .book .tikserch li{
+    float: left;
+    font-size: 20px;
+    margin: 20px 10px 0 10px;
+    color: #555;
+    font-family:"Heiti TC";
+    line-height: 35px;
+}
+#container .book .tikserch li input{
+    width: 220px;
+    height: 30px;
+    font-size: 16px;
+    text-indent: 5px;
+    border: 2px solid #eeeeee;
+    border-radius: 5px;
+}
+#container .book .tikserch li input::placeholder{
+    color: #aaaaaa;
+    font-family: "Heiti TC";
+}
+#container .book  .booking{
+    position: relative;
+    bottom: 40px;
+    left: 750px;
+    width: 80px;
+    height: 90px;
+    background-color: #fa6600;
+    text-align: center;
+    line-height: 70px;
+    border-radius: 5px;
+
+}
+#container .book .booking a{
+    color: white;
+    font-size: 18px;
+    font-family: "Songti TC";
+    display: block;
+}
+#container .planbook .newplan .newticket{
+    width: 900px;
+    margin: 20px 10px;
+    border: 1px solid #999;
+    border-collapse: collapse;
+}
+#container .planbook .newplan .newticket th{
+    height: 70px;
+    border: 1px solid #999999;
+    border-right: none;
+    border-left: none;
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+    font-family: "Heiti TC";
+}
+#container .planbook .newplan .newticket td{
+    height: 50px;
+    border: 1px solid #999999;
+    border-right: none;
+    border-left: none;
+    text-align: center;
+    color: #666666;
+    font-size: 18px;
+}
+#container .planbook .newplan .newticket .tikprice{
+    font-weight: bold;
+    color: #ff6600;
+}
+#container .planbook .newplan .newticket p{
+    width: 70px;
+    height: 35px;
+    margin: auto auto;
+    background-color: #ff6600;
+    border-radius: 5px;
+}
+#container .planbook .newplan .newticket a{
+    line-height: 35px;
+    color: white;
+    display: block;
+
+}

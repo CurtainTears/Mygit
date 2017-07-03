@@ -5,6 +5,7 @@
     <title>机票订购</title>
     <link rel="stylesheet" href="style/basic.css">
     <link rel="stylesheet" href="style/infor.css">
+    <link rel="stylesheet" href="style/plan.css">
 </head>
 <body>
 <header>
@@ -25,7 +26,7 @@
             <p class="center"><a href="landscape.html" title="风景欣赏" target="_self" class="nav-a">风景欣赏</a></p>
         </div>
         <div id="nav5">
-            <p class="center"><a href="profile.html" title="公司简介" target="_self" class="nav-a" style="background-color: black">公司简介</a></p>
+            <p class="center"><a href="profile.html" title="公司简介" target="_self" class="nav-a">公司简介</a></p>
         </div>
     </div>
 </header>
@@ -113,7 +114,138 @@
             </div>
         </div>
     </aside>
-
+    <div class="planbook">
+        <div class="book">
+            <h2>机票预订</h2>
+            <hr>
+            <ul class="booktitle">
+                <li>航班类型</li>
+                <li class="active"><p><a href="#">单程</a></p></li>
+                <li><p><a href="#">往返</a></p></li>
+            </ul>
+            <ol class="tikserch">
+                <li><p>出发城市</p></li>
+                <li><input type="text" placeholder="城市名"></li>
+                <li><p>出发时间</p></li>
+                <li><input type="datetime" placeholder="时间/日期"></li>
+                <li><p>返回城市</p></li>
+                <li><input type="text" placeholder="城市名"></li>
+                <li><p>返回时间</p></li>
+                <li><input type="datetime" placeholder="时间/日期"></li>
+            </ol>
+            <div class="booking"><a href="#">订票</a></div>
+        </div>
+        <div class="newplan">
+            <h2>最新机票</h2>
+            <hr>
+            <ul class="booktitle">
+                <li>热门城市:</li>
+                <li class="active"><p><a href="#">北京</a></p></li>
+                <li><p><a href="#">上海</a></p></li>
+                <li><p><a href="#">广州</a></p></li>
+                <li><p><a href="#">深圳</a></p></li>
+                <li><p><a href="#">重庆</a></p></li>
+                <li><p><a href="#">成都</a></p></li>
+                <li><p><a href="#">杭州</a></p></li>
+                <li><p><a href="#">南京</a></p></li>
+            </ul>
+            <table class="newticket">
+                <thead><tr>
+                    <th>路线</th>
+                    <th>日期</th>
+                    <th>价格</th>
+                    <th>税费</th>
+                    <th>餐食</th>
+                    <th>航班</th>
+                    <th>预订</th>
+                </tr></thead>
+                <tbody><tr>
+                    <td>北京-成都</td>
+                    <td>10-15</td>
+                    <td class="tikprice">¥745</td>
+                    <td><strong>¥50</strong></td>
+                    <td>有</td>
+                    <td>春秋航空</td>
+                    <td><p><a href="#">预订</a></p></td>
+                </tr>
+                <tr>
+                    <td>北京-上海</td>
+                    <td>10-15</td>
+                    <td class="tikprice">¥479</td>
+                    <td>¥45</td>
+                    <td>无</td>
+                    <td>南方航空</td>
+                    <td><p><a href="#">预订</a></p></td>
+                </tr>
+                <tr>
+                    <td>北京-深圳</td>
+                    <td>10-15</td>
+                    <td class="tikprice">¥561</td>
+                    <td><strong>¥52</strong></td>
+                    <td>有</td>
+                    <td>西部航空</td>
+                    <td><p><a href="#">预订</a></p></td>
+                </tr>
+                <tr>
+                    <td>北京-杭州</td>
+                    <td>10-15</td>
+                    <td class="tikprice">¥378</td>
+                    <td><strong>¥36</strong></td>
+                    <td>无</td>
+                    <td>天津航空</td>
+                    <td><p><a href="#">预订</a></p></td>
+                </tr>
+                <tr>
+                    <td>北京-广州</td>
+                    <td>10-15</td>
+                    <td class="tikprice">¥612</td>
+                    <td><strong>¥44</strong></td>
+                    <td>有</td>
+                    <td>首都航空</td>
+                    <td><p><a href="#">预订</a></p></td>
+                </tr>
+                <tr>
+                    <td>北京-重庆</td>
+                    <td>10-15</td>
+                    <td class="tikprice">¥428</td>
+                    <td><strong>¥62</strong></td>
+                    <td>有</td>
+                    <td>东方航空</td>
+                    <td><p><a href="#">预订</a></p></td>
+                </tr>
+                <tr>
+                    <td>北京-昆明</td>
+                    <td>10-15</td>
+                    <td class="tikprice">¥509</td>
+                    <td><strong>¥35</strong></td>
+                    <td>无</td>
+                    <td>厦门航空</td>
+                    <td><p><a href="#">预订</a></p></td>
+                </tr>
+                <tr>
+                    <td>北京-厦门</td>
+                    <td>10-15</td>
+                    <td class="tikprice">¥893</td>
+                    <td><strong>¥73</strong></td>
+                    <td>有</td>
+                    <td>深圳航空</td>
+                    <td><p><a href="#">预订</a></p></td>
+                </tr>
+                <tr>
+                    <td>北京-长沙</td>
+                    <td>10-15</td>
+                    <td class="tikprice">¥663</td>
+                    <td><strong>¥46</strong></td>
+                    <td>无</td>
+                    <td>四川航空</td>
+                    <td><p><a href="#">预订</a></p></td>
+                </tr></tbody>
+                <tfoot><tr>
+                    <td colspan="7">加载更多航班....</td>
+                </tr></tfoot>
+            </table>
+        </div>
+    </div>
 </div>
 <footer>
     <div id="foot">
