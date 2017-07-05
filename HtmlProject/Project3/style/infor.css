@@ -10,7 +10,7 @@
     height: 300px;
     margin: 0 auto;
 }
-#headline hgroup{
+#headline .hgroup{
     padding: 100px 0 0 50px;
 }
 #headline h2{

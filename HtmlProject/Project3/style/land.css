@@ -7,6 +7,10 @@
     margin: 0 0 10px 0;
     text-align: center;
 }
+#container .lscimg a{
+    color: #666666;
+    display: block;
+}
 #container .lsc h2{
     color: #999999;
     text-align: left;

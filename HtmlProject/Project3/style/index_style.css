@@ -5,7 +5,7 @@
     /*position: relative;*/
     /*top: 80px;*/
 }
-body form{
+.body form{
     width: 500px;
     height: 50px;
     position: absolute;
@@ -16,7 +16,7 @@ body form{
     background-color: rgba(40,40,40,0.7);
     border-radius: 10px;
 }
-body form input{
+.body form input{
     position: relative;
     top: 5px;
     left: 5px;
@@ -28,7 +28,7 @@ body form input{
     border-style: solid;
     outline: none;
 }
-body form button{
+.body form button{
     position: relative;
     top: 3px;
     left: 5px;
